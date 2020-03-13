@@ -92,7 +92,7 @@ class Calculator extends React.Component {
             newNum2 = newNum1;
             newNum1 = number.toString();
         } else {
-            newNum1 = parseInt(number.toString() + newNum1.toString());
+            newNum1 = parseInt(newNum1.toString() + number.toString());
         }
         this.setState({
             num1: newNum1,
