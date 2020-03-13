@@ -1,5 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom"
+import PropTypes from "prop-types"
 
 import './style.css'
 
@@ -12,6 +13,10 @@ class CalcButton extends React.Component {
         )
     }
 }
+CalcButton.propTypes = {
+    text: PropTypes.string,
+    onClick: PropTypes.func
+}
 
 class CalcNumber extends React.Component {
 
@@ -23,6 +28,10 @@ class CalcNumber extends React.Component {
         )
     }
 }
+CalcNumber.propTypes = {
+    number: PropTypes.number,
+    onClick: PropTypes.func
+}
 
 class CalcDisplay extends React.Component {
     render() {
@@ -32,6 +41,9 @@ class CalcDisplay extends React.Component {
             </p>
         )
     }
+}
+CalcDisplay.propTypes = {
+    displayValue: PropTypes.string
 }
 
 class Calculator extends React.Component {
